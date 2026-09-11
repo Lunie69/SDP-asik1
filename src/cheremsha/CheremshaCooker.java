@@ -33,6 +33,26 @@ public class CheremshaCooker {
     }
 
     public Cheremsha build() {
+        validate();
+
         return new Cheremsha(weight, freshness, sause, spicyLvl, price);
+    }
+
+    private void validate() {
+        if (weight <= 0) {
+            throw new IllegalStateException("Ves dolzhen bit > 0");
+        }
+
+        if (price <= 0) {
+            throw new IllegalStateException("Price dolzhna bit > 0");
+        }
+
+        if (sause == null || sause.isBlank()) {
+            throw new IllegalStateException("Nuzhen sause");
+        }
+
+        if (freshness == null || freshness.isBlank()) {
+            throw new IllegalStateException("Nuzhna svezhest");
+        }
     }
 }
