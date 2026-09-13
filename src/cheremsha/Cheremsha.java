@@ -19,7 +19,7 @@ public class Cheremsha {
     public String toString() {
         return "Cheremsha{" + "weight=" + weight +
                 " kg, sause='" + sause + '\'' +
-                ", price=" + price + " KZT, freshness=" +
-                freshness + '\'' + "spicyLvl='" + spicyLvl + '\'' + '}';
+                ", price=" + price + " KZT, freshness='" +
+                freshness + '\'' + ", spicyLvl='" + spicyLvl + '\'' + '}';
     }
 }
